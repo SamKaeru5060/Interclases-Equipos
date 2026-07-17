@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipos Interclases - Javiera Londoño</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Poppins, Arial, sans-serif; line-height: 1.6; color: #333; background: #f4f7f6; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+    header { color: #fff; text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #1e3c72, #2a5298); border-radius: 0 0 20px 20px; box-shadow: 0 4px 15px rgba(0,0,0,.1); }
+    header h1 { font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 10px; }
+    header p { font-size: 1.1rem; opacity: .9; margin-bottom: 20px; }
+    nav a { color: #fff; text-decoration: none; margin: 0 10px; font-weight: 600; }
+    nav a:hover { color: #f39c12; }
+    section { background: #fff; margin: 30px 0; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,.05); }
+    h2 { color: #1e3c72; margin-bottom: 20px; padding-bottom: 10px; font-weight: 600; position: relative; }
+    h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 50px; height: 4px; border-radius: 2px; background: #f39c12; }
+    .deportes-banner { height: 350px; overflow: hidden; border-radius: 12px; margin-bottom: 20px; background: #e8eef5; }
+    .deportes-banner img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
+    .equipos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-top: 20px; }
+    .equipo-card { display: flex; align-items: center; gap: 14px; min-height: 105px; padding: 18px; background: #f9f9f9; border: 1px solid #e6edf5; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,.05); transition: transform .25s ease; cursor: pointer; }
+    .equipo-card:hover { transform: translateY(-5px); }
+    .bandera, .deporte-icon { width: 54px; height: 54px; flex: 0 0 54px; border-radius: 50%; }
+    .bandera { display: block; object-fit: cover; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+    .deporte-icon { display: grid; place-items: center; font-size: 2rem; background: #edf3fa; }
+    .escudo { width: 54px; height: 54px; flex: 0 0 54px; display: block; object-fit: contain; border-radius: 8px; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+    .equipo-info h3 { color: #1e3c72; margin-bottom: 3px; font-size: 1.12rem; }
+    .equipo-info p { color: #5c6d80; font-size: .95rem; }
+    .logros-list { list-style: none; }
+    .logros-list li { display: flex; align-items: center; font-size: 1.1rem; margin-bottom: 15px; }
+    .logros-list span { font-size: 1.5rem; margin-right: 15px; }
+    .logros-galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .logro-equipo { overflow: hidden; border-radius: 12px; text-align: center; background: #f7f9fc; border: 1px solid #e6edf5; }
+    .logro-equipo img { width: 100%; height: 235px; display: block; object-fit: contain; padding: 16px; background: #fff; }
+    .imagen-vacia { height: 235px; background: #fff; }
+    .logro-equipo h3 { padding: 13px; color: #1e3c72; font-size: 1.1rem; }
+    .contacto-info p { margin-bottom: 12px; font-size: 1.05rem; }
+    .contacto-info strong, .contacto-info a { color: #1e3c72; }
+    footer { text-align: center; padding: 20px; margin-top: 40px; color: #777; font-size: .9rem; border-top: 1px solid #ddd; }
+    @media (max-width: 520px) { section { padding: 22px; } .deportes-banner { height: 230px; } nav a { margin: 0 5px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Equipos Interclases</h1>
+      <p>Fomentando el talento, la disciplina y el trabajo en equipo.</p>
+      <nav><a href="#inicio">Inicio</a> | <a href="#equipos">Equipos</a> | <a href="#contacto">Contacto</a></nav>
+    </div>
+  </header>
+  <main class="container">
+    <section id="inicio">
+      <h2>Bienvenidos</h2>
+      <div class="deportes-banner">
+        <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1600&q=85" alt="Fotografía deportiva en una cancha de fútbol">
+      </div>
+      <p>Nuestra institución educativa promueve la formación integral de los estudiantes mediante la práctica deportiva. Contamos con diferentes equipos que participan en competencias internas y externas, fortaleciendo valores como el respeto, la responsabilidad y el trabajo en equipo.</p>
+    </section>
+    <section id="equipos">
+      <h2>Equipos Deportivos</h2>
+      <div class="equipos-grid">
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/de.png" alt="Bandera de Alemania"><div class="equipo-info"><h3>5:1</h3><p>Alemania</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/es.png" alt="Bandera de España"><div class="equipo-info"><h3>5:2</h3><p>España</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/nl.png" alt="Bandera de Países Bajos"><div class="equipo-info"><h3>5:3</h3><p>Países Bajos</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/co.png" alt="Bandera de Colombia"><div class="equipo-info"><h3>6:1</h3><p>Colombia</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/sn.png" alt="Bandera de Senegal"><div class="equipo-info"><h3>6:2</h3><p>Senegal</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/fr.png" alt="Bandera de Francia"><div class="equipo-info"><h3>6:3</h3><p>Francia</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/us.png" alt="Bandera de Estados Unidos"><div class="equipo-info"><h3>6:4</h3><p>Estados Unidos</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/gb-eng.png" alt="Bandera de Inglaterra"><div class="equipo-info"><h3>7:1</h3><p>Inglaterra</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/uy.png" alt="Bandera de Uruguay"><div class="equipo-info"><h3>7:2</h3><p>Uruguay</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/no.png" alt="Bandera de Noruega"><div class="equipo-info"><h3>7:3</h3><p>Noruega</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/mx.png" alt="Bandera de México"><div class="equipo-info"><h3>8:1</h3><p>México</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/jp.png" alt="Bandera de Japón"><div class="equipo-info"><h3>8:2</h3><p>Japón</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/hr.png" alt="Bandera de Croacia"><div class="equipo-info"><h3>8:3</h3><p>Croacia</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/ch.png" alt="Bandera de Suiza"><div class="equipo-info"><h3>9:1</h3><p>Suiza</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/be.png" alt="Bandera de Bélgica"><div class="equipo-info"><h3>9:2</h3><p>Bélgica</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/it.png" alt="Bandera de Italia"><div class="equipo-info"><h3>9:3</h3><p>Italia</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/ec.png" alt="Bandera de Ecuador"><div class="equipo-info"><h3>10:1</h3><p>Ecuador</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/ar.png" alt="Bandera de Argentina"><div class="equipo-info"><h3>10:2</h3><p>Argentina</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/br.png" alt="Bandera de Brasil"><div class="equipo-info"><h3>10:3</h3><p>Brasil</p></div></article>
+        <article class="equipo-card"><img class="bandera" src="https://flagcdn.com/w80/pt.png" alt="Bandera de Portugal"><div class="equipo-info"><h3>11</h3><p>Portugal</p></div></article>
+        <article class="equipo-card"><img class="escudo" src="escudo-voley.jpeg" alt="Escudo del equipo de Voley"><div class="equipo-info"><h3>Voley</h3><p>Equipo deportivo</p></div></article>
+        <article class="equipo-card"><img class="escudo" src="escudo-rugby.jpg" alt="Escudo de la Institución Educativa Javiera Londoño"><div class="equipo-info"><h3>Rugby</h3><p>Equipo deportivo</p></div></article>
+      </div>
+    </section>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="contacto-info"><p><strong>Institución Educativa:</strong> Javiera Londoño Barrio Sevilla</p><p><strong>Correo:</strong> <a href="mailto:ie.javieralondonosev@medellin.gov.co">ie.javieralondonosev@medellin.gov.co</a></p><p><strong>Teléfono:</strong> +57 (604) 211 82 91 - +57 (604) 233 62 19</p></div>
+    </section>
+  </main>
+  <footer><p>© 2026 Deportes Institucionales. Todos los derechos reservados.</p></footer>
+  <script>
+    document.querySelectorAll('.equipo-card').forEach((tarjeta) => {
+      tarjeta.tabIndex = 0;
+      tarjeta.setAttribute('role', 'link');
+      tarjeta.setAttribute('aria-label', `Ver ficha de ${tarjeta.innerText.replace(/\n/g, ' ')}`);
+      const abrirFicha = () => { window.location.href = `equipo.html?equipo=${encodeURIComponent(tarjeta.querySelector('h3').textContent)}`; };
+      tarjeta.addEventListener('click', abrirFicha);
+      tarjeta.addEventListener('keydown', (evento) => { if (evento.key === 'Enter' || evento.key === ' ') { evento.preventDefault(); abrirFicha(); } });
+    });
+  </script>
+</body>
+</html>
